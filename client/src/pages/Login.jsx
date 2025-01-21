@@ -1,7 +1,10 @@
-function Login (){
+import LogForm from '../components/logForm';
+
+function Login () {
   return(
-    <h1>Login</h1>
-  )
+    <LogForm/>
+  );
 }
+
 
 export default Login;
