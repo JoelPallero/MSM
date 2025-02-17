@@ -7,7 +7,7 @@ const SideBar = ({
   menuType = "",
   routes = {},
   classMenu = "", 
-  onClose = () => {}
+  // onClose = () => {}
 }) => {
 
   const menuItems = routes[menuType];

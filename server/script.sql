@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS church (
 -- Create the 'roles' table (to store roles like master, admin, member)
 CREATE TABLE IF NOT EXISTS roles (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name ENUM('master', 'leader', 'member', 'multimedia') NOT NULL
+    name ENUM('master', 'admin', 'leader', 'member', 'multimedia') NOT NULL
 );
 
 -- Create the 'status' table (to store the possible states for entities)

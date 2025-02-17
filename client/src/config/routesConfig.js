@@ -1,10 +1,10 @@
-import Login from "../pages/Login";
+import Logout from "../pages/Logout";
 import Calendario from "../pages/Calendario"; //Home
 import Church from "../pages/Church";
 import Group from "../pages/Group";
-import Song from "../pages/Song";
+import Song from "../pages/Songbook";
 import Search from "../pages/Search";
-// import Dashboard from "../pages/Dashboard"; dashboard
+import Dashboard from "../pages/Dashboard";
 
 const routesConfig = {
   mainMaster: [
@@ -13,7 +13,7 @@ const routesConfig = {
     { path: "/church", label: "Iglesias", Component: Church },
     { path: "/group", label: "Equipos", Component: Group },
     { path: "/song", label: "Canciones", Component: Song },
-    { path: "/login", label: "Login", Component: Login },
+    { path: "/Logout", label: "Logout", Component: Logout },
     { path: "/search", label: "Search", Component: Search },
   ],
   mainMember: [
@@ -22,8 +22,8 @@ const routesConfig = {
     { path: "/group", label: "Equipos", Component: Group },
     { path: "/song", label: "Canciones", Component: Song },
   ],
-  alternative: [
-    { path: "/login", label: "Login", Component: Login },
+  mainDefault: [
+    { path: "/Logout", label: "Logout", Component: Logout },
     { path: "/search", label: "Search", Component: Search },
   ],
 };
