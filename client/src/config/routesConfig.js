@@ -1,30 +1,27 @@
 import Logout from "../pages/Logout";
-import Calendario from "../pages/Calendario"; //Home
+import Meetings from "../pages/Meetings";
 import Church from "../pages/Church";
-import Group from "../pages/Group";
-import Song from "../pages/Songbook";
+import Teams from "../pages/Teams";
+import Songbook from "../pages/Songbook";
 import Search from "../pages/Search";
-import Dashboard from "../pages/Dashboard";
+import Members from "../pages/Members";
+import Dashboard from "../pages/Dashboard"; //"Home" de la web
 
 const routesConfig = {
   mainMaster: [
     { path: "/", label: "Dashboard", Component: Dashboard },
-    { path: "/calendario", label: "Calendario", Component: Calendario },
+    { path: "/meetings", label: "Meetings", Component: Meetings },
     { path: "/church", label: "Iglesias", Component: Church },
-    { path: "/group", label: "Equipos", Component: Group },
-    { path: "/song", label: "Canciones", Component: Song },
-    { path: "/Logout", label: "Logout", Component: Logout },
+    { path: "/teams", label: "Equipos", Component: Teams },
+    { path: "/members", label: "Equipos", Component: Members },
+    { path: "/Songbook", label: "Canciones", Component: Songbook },
+  ],
+  mainAccount: [
     { path: "/search", label: "Search", Component: Search },
   ],
-  mainMember: [
-    { path: "/", label: "Calendario", Component: Calendario },
-    { path: "/church", label: "Iglesias", Component: Church },
-    { path: "/group", label: "Equipos", Component: Group },
-    { path: "/song", label: "Canciones", Component: Song },
-  ],
-  mainDefault: [
-    { path: "/Logout", label: "Logout", Component: Logout },
+  mainSecondary: [
     { path: "/search", label: "Search", Component: Search },
+    { path: "/Logout", label: "Logout", Component: Logout },
   ],
 };
 
