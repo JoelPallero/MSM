@@ -1,80 +1,158 @@
-header{
+/* From here, its the TopBar */
+header {
   width: 100%;
-  height: 70px;
+  height: 60px;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
 }
 
-.sidebar-container {
-  width: 300px;
-  height: 100vh;
-  background-color: #ffffff;
-  padding-top: 100px;
-  position: relative;
-}
-
-.sidebar-container ul{
-  width: 100%;  
+.topbar-container ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
   height: 100%;
+  gap: 20px;
+}
+
+.topbar-container ul li a{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  list-style: none;
-}
-
-.sidebar-container ul li{
-  width: 100%;
-  height: 50px;
-}
-
-.sidebar-container a{
-  width: 100%;
-  height: 100%;
-  color: #222222;
-  text-decoration: none;
-  font-size: 15px;
-  padding: 8px 16px;
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  transition: all .1s ease-in-out;
+  flex-wrap: nowrap;
+  fill: #212121;
 }
 
-.sidebar-container svg{
-  fill: #c2c2c2;
+.topbar-container ul li a:not(.mid-link){
+  gap: 5px;
+}
+
+.topbar-title{
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  color: #222222;
+}
+
+
+.topbar-container a{
   transition: fill .1s ease-in-out;
 }
 
-.sidebar-container a:hover{
-  background-color: #f8f8f8;
-}
-
-.sidebar-container a:hover svg{
-  fill: #4463eb;
-}
-
-
-#menu-button{
-  position: absolute;
-  width: 50px;
-  height: 50px;
+.topbar-container .mid-link{
+  width: 65px;
+  height: 65px;
   background-color: #ffffff;
   border-radius: 999px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  bottom: 90px;
-  right: 0;
-  transform: rotate(-180deg);
-  opacity: 0;
+  outline: 5px solid #f1f1f1;
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
   transition: all .2s ease-in-out;
+  margin-top: -15px;
+  padding: 10px;
 }
 
-#menu-button:hover{
-  cursor: pointer;
+.topbar-container .mid-link::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 999px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.sidebar-container:hover #menu-button{
-  opacity: 1;
-  right: -25px;
+
+/* From here, its the sidebar */
+.sidebar-container {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .sidebar-container {
+    width: 300px;
+    height: 100vh;
+    background-color: #ffffff;
+    padding-top: 100px;
+    position: relative;
+  }
+
+  .sidebar-container ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+  }
+
+  .sidebar-container ul li {
+    width: 100%;
+    height: 50px;
+  }
+
+  .sidebar-container a {
+    width: 100%;
+    height: 100%;
+    color: #222222;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .1s ease-in-out;
+  }
+
+  .sidebar-container svg {
+    fill: #c2c2c2;
+    transition: fill .1s ease-in-out;
+  }
+
+  .sidebar-container a:hover {
+    background-color: #f8f8f8;
+  }
+
+  .sidebar-container a:hover svg {
+    fill: #4463eb;
+  }
+
+  #menu-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 999px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    bottom: 90px;
+    right: 0;
+    transform: rotate(-180deg);
+    opacity: 0;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
+    transition: all .2s ease-in-out;
+  }
+
+  #menu-button:hover {
+    cursor: pointer;
+  }
+
+  .sidebar-container:hover #menu-button {
+    opacity: 1;
+    right: -25px;
+  }
 }
